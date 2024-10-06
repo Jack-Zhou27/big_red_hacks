@@ -5,40 +5,9 @@ import Feed from "@/components/Feed.js";
 import big_red from "@/public/assets/images/big_red.png";
 import Image from "next/image";
 import BackgroundVideo from "@/components/BackgroundVideo";
+import wave from "@/public/assets/images/wave2.svg"
 import Link from 'next/link';
 const Home = () => {
-  
-    const videoRef = useRef(null);
-    const [isVideoSectionVisible, setIsVideoSectionVisible] = useState(true);
-  
-    // Function to check if the video section is in view
-    const handleScroll = () => {
-      const videoSection = document.getElementById('video-section');
-      const rect = videoSection.getBoundingClientRect();
-      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  
-      if (rect.bottom < 0 || rect.top > window.innerHeight) {
-        setIsVideoSectionVisible(false);
-      } else {
-        setIsVideoSectionVisible(true);
-      }
-    };
-  
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-  
-    useEffect(() => {
-      if (isVideoSectionVisible) {
-        document.body.style.backgroundColor = 'transparent'; // Transparent during the video section
-      } else {
-        document.body.style.backgroundColor = '#ffffff'; // White background after video section
-      }
-    }, [isVideoSectionVisible]);
-  
 
   return (
     <>
@@ -66,8 +35,36 @@ const Home = () => {
       </div>
       </section>
       
+      
       <section id="video-section" className="video-background-section">
         <BackgroundVideo/>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <h1 className="red_gradient items-center"> made with love by the Cornell Flights team </h1>
       </section>
 
      
